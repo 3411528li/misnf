@@ -22,7 +22,7 @@ proxies:
   type: vless
   server: 151.101.56.6
   port: 443
-  uuid: 1fac5e18-2ca8-4626-c299-1f3f21c6b55e
+  uuid: 622cd467-ae00-4afe-b7ee-15dca6b9649a
   udp: true
   tls: true
   skip-cert-verify: true
@@ -62,62 +62,6 @@ proxies:
       Host: c12.com
 - name: 🇫🇮 FI 05 - xiaohe
   type: vless
-  server: 151.101.56.6
-  port: 443
-  uuid: 1fac5e18-2ca8-4626-c299-1f3f21c6b55e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /?
-    headers:
-      Host: c12.com
-- name: 🇫🇮 FI 06 - xiaohe
-  type: vless
-  server: 151.101.56.6
-  port: 443
-  uuid: 1fac5e18-2ca8-4626-c299-1f3f21c6b55e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /?
-    headers:
-      Host: c12.com
-- name: 🇫🇮 FI 07 - xiaohe
-  type: vless
-  server: 151.101.56.6
-  port: 443
-  uuid: 1fac5e18-2ca8-4626-c299-1f3f21c6b55e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: c12.com
-- name: 🇫🇮 FI 08 - xiaohe
-  type: vless
-  server: 151.101.56.6
-  port: 443
-  uuid: 622cd467-ae00-4afe-b7ee-15dca6b9649a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--BYA--CHANEL---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN--@JKVPN---@JKVPN---@JKVPN---@JKVPNfp=chrome
-    headers:
-      Host: c12.com
-- name: 🇫🇮 FI 09 - xiaohe
-  type: vless
   server: 185.79.138.71
   port: 448
   uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
@@ -138,10 +82,6 @@ proxy-groups:
   - 🇫🇮 FI 03 - xiaohe
   - 🇫🇮 FI 04 - xiaohe
   - 🇫🇮 FI 05 - xiaohe
-  - 🇫🇮 FI 06 - xiaohe
-  - 🇫🇮 FI 07 - xiaohe
-  - 🇫🇮 FI 08 - xiaohe
-  - 🇫🇮 FI 09 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -152,9 +92,5 @@ proxy-groups:
   - 🇫🇮 FI 03 - xiaohe
   - 🇫🇮 FI 04 - xiaohe
   - 🇫🇮 FI 05 - xiaohe
-  - 🇫🇮 FI 06 - xiaohe
-  - 🇫🇮 FI 07 - xiaohe
-  - 🇫🇮 FI 08 - xiaohe
-  - 🇫🇮 FI 09 - xiaohe
 rules:
 - MATCH,PROXIES
