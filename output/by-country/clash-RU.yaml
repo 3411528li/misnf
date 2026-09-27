@@ -5,23 +5,78 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  type: ss
-  server: 62.109.12.234
-  port: 2055
-  cipher: chacha20-ietf-poly1305
-  password: WxYpOK1iPSJySbVNMMJDtw
+  type: vless
+  server: fbsv6.guardora.pro
+  port: 443
+  uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: fbsv6.guardora.pro
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: fbsv6.guardora.pro
+- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  type: vless
+  server: 46.8.200.91
+  port: 443
+  uuid: b8201bab-fa6c-4f6e-b289-b5da660c6f69
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cf3.rumedia-cdn.com
+  network: ws
+  ws-opts:
+    path: /cdn/v3/live
+    headers:
+      Host: cf3.rumedia-cdn.com
+- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+  type: vless
+  server: 104.21.91.50
+  port: 443
+  uuid: 3e43ffd1-3f7b-45b0-a955-c249010c7ebc
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: Open-39.AVL-a47261.WorKErS.DeV
+  network: ws
+  ws-opts:
+    path: /vl/9Vd7GxzImsNPSKUT9uIK0uYIARIV?ed=2560
+    headers:
+      Host: open-39.avl-a47261.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+  type: vless
+  server: 104.21.70.21
+  port: 443
+  uuid: 8f53fce2-6c17-4e37-9ae9-d969fd85117c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: api-hub-c9a393.alimirzai539-484.workers.dev
+  network: ws
+  ws-opts:
+    path: /vl/Wp4FqWLcoYNYXCovu4?ed=2560
+    headers:
+      Host: api-hub-c9a393.alimirzai539-484.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
 rules:
 - MATCH,PROXIES
