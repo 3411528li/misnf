@@ -4,26 +4,26 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
+- name: 🇮🇷 IR 01 - xiaohe
   type: vless
-  server: turkey-ip1.mmdaqaorg.xyz
-  port: 50738
-  uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
+  server: 37.202.228.219
+  port: 443
+  uuid: ff1906a5-a446-44e4-8e72-4e2d61775fa0
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: turkey-ip1.mmdaqaorg.xyz
+  servername: ns2.irts.lol
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
+  - 🇮🇷 IR 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
+  - 🇮🇷 IR 01 - xiaohe
 rules:
 - MATCH,PROXIES
